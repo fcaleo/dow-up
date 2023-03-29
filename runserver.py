@@ -7,5 +7,5 @@ async def rr(cmd):
     print(stdout, stderr)
     return True
 
-cmd = 'python web.py'
+cmd = 'python3 web.py'
 web = asyncio.run_coroutine_threadsafe(rr(cmd), asyncio.get_event_loop_policy().get_event_loop())
