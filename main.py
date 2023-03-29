@@ -22,7 +22,7 @@ clients = [app]
 
 @app.on_message()
 async def message_handler(app, message):
-    if message.chat.id != 1935578948 or message.chat.id != 885488992:return
+#     if message.chat.id != 1935578948 or message.chat.id != 885488992:return
     if message.text == '/start':
         await message.reply('i am online')
         return
