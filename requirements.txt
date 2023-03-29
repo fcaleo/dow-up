@@ -1,0 +1,10 @@
+requests
+requests[socks]
+beautifulsoup4 
+asyncio
+pyrogram
+datetime
+aiohttp
+TgCrypto
+aiohttp-socks
+Flask
