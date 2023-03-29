@@ -3,6 +3,7 @@ import asyncio
 from pyrogram import Client, idle
 import re
 import runserver
+import os
 from utiles import download_file_from_url, download_tgFile, upload_tgFile, get_file_name, get_message_info
 '-------- Login ----------'
 # from logging import INFO, basicConfig, log
@@ -14,7 +15,7 @@ from utiles import download_file_from_url, download_tgFile, upload_tgFile, get_f
 print('iniciando')
 api_id = "5095599"
 api_hash = "ac087d6bb97a885e4f64571cf7ead8a4"
-bot_token = '1906762390:AAH0bT5eB_mwBbNiaeHnrjDSbfa_XTt6l48'
+bot_token = '5673311462:AAFC2f3UBp6RCoqOdLgkd5ALb5HTvY2Doqg'
 app = Client('client',api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 clients = [app]
@@ -46,11 +47,13 @@ async def message_handler(app, message):
 
 
 
-if __name__ == '__main__':      
-    app.start()
-    app.send_message(1935578948, 'online')
-    print("Bot Started")
-    idle()
-    app.stop()
+if __name__ == '__main__': 
+    if not os.path.exists('ONLINE'):
+        app.start()
+        app.send_message(1935578948, 'online')
+        print("Bot Started")
+        with open('ONLINE', 'w') as f:pass
+        idle()
+        app.stop()
     # asyncio.get_event_loop_policy().get_event_loop().run_forever()
 
