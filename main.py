@@ -5,12 +5,13 @@ import re
 import runserver
 from utiles import download_file_from_url, download_tgFile, upload_tgFile, get_file_name, get_message_info
 '-------- Login ----------'
-from logging import INFO, basicConfig, log
+# from logging import INFO, basicConfig, log
 
-basicConfig(format="[%(levelname)s]: %(message)s", level=INFO, force=True)
-log(INFO, "Initializing...")
-'---------------------------------------------'
+# basicConfig(format="[%(levelname)s]: %(message)s", level=INFO, force=True)
+# log(INFO, "Initializing...")
+# '---------------------------------------------'
 
+print('iniciando')
 api_id = "5095599"
 api_hash = "ac087d6bb97a885e4f64571cf7ead8a4"
 bot_token = '1906762390:AAH0bT5eB_mwBbNiaeHnrjDSbfa_XTt6l48'
@@ -48,7 +49,7 @@ async def message_handler(app, message):
 if __name__ == '__main__':      
     app.start()
     app.send_message(1935578948, 'online')
-    log(INFO, "Bot Started")
+    print("Bot Started")
     idle()
     app.stop()
     # asyncio.get_event_loop_policy().get_event_loop().run_forever()
