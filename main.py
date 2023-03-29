@@ -55,5 +55,7 @@ if __name__ == '__main__':
         with open('ONLINE', 'w') as f:pass
         idle()
         app.stop()
+        if os.path.exists('ONLINE'):
+            os.unlink('ONLINE')
     # asyncio.get_event_loop_policy().get_event_loop().run_forever()
 
