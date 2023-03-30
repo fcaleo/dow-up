@@ -5,11 +5,12 @@ import re
 import runserver
 import os
 from utiles import download_file_from_url, download_tgFile, upload_tgFile, get_file_name, get_message_info
-import db
+# import db
 
-global status
+# global status
 
-if db.status != 'on':
+# if db.status != 'on':
+if True:
     print('iniciando')
     api_id = "5095599"
     api_hash = "ac087d6bb97a885e4f64571cf7ead8a4"
@@ -50,9 +51,9 @@ if db.status != 'on':
             app.start()
             app.send_message(1935578948, 'online')
             print("Bot Started")
-            async def i():
-                await db.write(db.dbname, 'on')
-            asyncio.get_event_loop_policy().get_event_loop().run_until_complete(i())
+            # async def i():
+            #     await db.write(db.dbname, 'on')
+            # asyncio.get_event_loop_policy().get_event_loop().run_until_complete(i())
             idle()
             app.stop()
             if os.path.exists('ONLINE'):
